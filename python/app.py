@@ -73,6 +73,7 @@ urun1["stok"]=7
 
 # urun2 fiyatı güncellendi
 urun2["fiyat"]=799
+urunler[0]["stok"] = urunler[0]["stok"] - 1      
 
 print(urunler[0]["ad"])     # liste üzerinde işlem yapma
 print(urunler[3]["stok"])
