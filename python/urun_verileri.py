@@ -80,3 +80,23 @@ print(urunler[3]["stok"])
 
 print(urunler[1]["ad"])
 print(urunler[3]["fiyat"])
+
+
+
+# ==========================================
+# STOK KONTROL SİSTEMİ
+# ==========================================
+
+
+if urun1["stok"] == 0 :
+    print("Ürün stokta yok")
+
+elif urun1["stok"] >=1 and urun1["stok"] <=5 :
+    print("Son Ürünler ! Acele edin")
+
+elif urun1["stok"] >= 5 :
+    print("Ürün Stokta Mevcut")
+
+else:
+    print("Maalesef ürün mevcut değil")
+
