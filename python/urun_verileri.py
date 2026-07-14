@@ -94,9 +94,61 @@ if urun1["stok"] == 0 :
 elif urun1["stok"] >=1 and urun1["stok"] <=5 :
     print("Son Ürünler ! Acele edin")
 
-elif urun1["stok"] >= 5 :
+elif urun1["stok"] > 5 :
     print("Ürün Stokta Mevcut")
 
 else:
     print("Maalesef ürün mevcut değil")
 
+
+
+# ==========================================
+# İNDİRİM KONTROL SİSTEMİ
+# ==========================================
+
+
+if urun1["indirim"]:
+    print(f" {urun1['ad']} ürünü indirimde!")
+else:
+    print(f"{urun1['ad']} ürününde indirim bulunmuyor.")
+
+
+
+# ==========================================
+# FAVORİ KONTROL SİSTEMİ
+# ==========================================
+
+
+if urun1["favori"]:
+    print(f"{urun1['ad']} favorilerinizde bulunuyor.")
+else:
+    print(f"{urun1['ad']} favorilerinizde bulunmuyor.")
+
+
+# --------------------------------------
+# Ücretsiz Kargo Sistemi
+#---------------------------------------
+
+if urun1["fiyat"] >= 1000 :
+    print(f'{urun1["ad"]} Bu ürün ücretsiz kargo kampanyasına dahildir.')
+elif urun1["fiyat"] >=700 and urun1["fiyat"] <=999:
+    print(f'{urun1["ad"]} Bu ürün ücretsiz kargo kampanyasına dahildir.')
+else:
+    print(f'{urun1["ad"]} Bu ürün ücretsiz kargo kampanyasına dahil değildir.')
+
+
+
+# VIP Kampanya Sistemi
+#----------------------#
+
+if urun1["indirim"] == True and urun1 ["fiyat"] >= 1000 :
+    print(f"{urun1['ad']} hem indirimde hem ücretsiz kargolu!")
+elif urun1["indirim"] == True and urun1["fiyat"] <1000 :
+    print(f"{urun1['ad']}Oversize Tişört indirimde.")
+elif urun1["indirim"] == False and urun1["fiyat"] >= 1000 :
+    print(f"{urun1['ad']} u ürün ücretsiz kargo kampanyasına dahildir.")
+else:
+    print(f"{urun1['ad']}Normal satış devam ediyor.")
+    
+
+   
